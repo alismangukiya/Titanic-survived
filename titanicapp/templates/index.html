@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="{% static 'vendors/jquery-flipster/css/jquery.flipster.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+	{% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> {% endcomment %}
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -66,14 +67,14 @@
 										<br>
 										which uses logistic regression model
 									</p>
-									<a href="#" class="btn btn-secondary mt-3">Predict</a>
+									<a href="#services" class="btn btn-secondary mt-3">Predict</a>
 								</div>
 								<div class="mt-5 mt-lg-0">
 									<lottie-player id="alis" src="https://assets4.lottiefiles.com/packages/lf20_Pq51ZX.json"
 										background="transparent" speed="1" style="width: 436px; height: 436px;" loop
 										autoplay></lottie-player>
 
-										<img id="status" src="http://clipart-library.com/images/8cEbeRpni.jpg" style="width:100px;height:100px;">
+										{% comment %} <img id="status" src="http://clipart-library.com/images/8cEbeRpni.jpg" style="width:100px;height:100px;"> {% endcomment %}
 										
 										{% comment %} <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_eo1xhbox.json"  background="transparent"  speed="1"  style="width: 400px; height: 400px;"  loop  autoplay></lottie-player> {% endcomment %}
 								</div>
@@ -154,6 +155,10 @@
 		</section>
 	</div>
 
+
+	
+	
+
 	<script src="{% static 'vendors/base/vendor.bundle.base.js' %}"></script>
 	<script src="{% static 'vendors/owl.carousel/js/owl.carousel.js' %}"></script>
 	<script src="{% static 'vendors/aos/js/aos.js' %}"></script>
@@ -162,17 +167,32 @@
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 	
 	<script>
+		
         window.onload = function exampleFunction() {
-            
-    		
+
+
 			if ( {{status}} == -1) {
+
+				Swal.fire({
+					html: '<div class="m-5"><center><lottie-player id="alis" src="https://assets2.lottiefiles.com/packages/lf20_hliaii.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></center></div>',
+					confirmButtonText: 'Better luck next time !!!' 
+				  })
+
 				document.getElementById("status").src = "https://di5qs4dv32t01.cloudfront.net/wp-content/uploads/2022/01/Missing-woman-software-employee-found-dead-in-Vijayawada.jpg";
 				
 			}
 			if ( {{status}} == 1) {
+
+				Swal.fire({
+				html: '<div class="m-5"><center><lottie-player id="alis" src="https://assets1.lottiefiles.com/temp/lf20_vS6iGX.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player></center></div>',
+				confirmButtonText: 'Live Happry life !!!'
+			  		})
+
 				document.getElementById("status").src = "https://memegenerator.net/img/instances/60839615.jpg";
 
 			}
