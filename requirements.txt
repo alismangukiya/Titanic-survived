@@ -1,8 +1,4 @@
 absl-py==1.0.0
-
-setuptools==0.7.3
-
-
 asgiref==3.4.1
 astunparse==1.6.3
 attrs==21.4.0
