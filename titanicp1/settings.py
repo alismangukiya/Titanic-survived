@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-n*qm(=s+h5+_d7kw0yr3q9rilej#kd&v1f1$)u8xe#rbc_$v63
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False        #host
 
-ALLOWED_HOSTS = ['127.0.0.1','sampledomain.com']
+ALLOWED_HOSTS = ['127.0.0.1','titanicsurvived.herokuapp.com/']
 
 
 # Application definition
